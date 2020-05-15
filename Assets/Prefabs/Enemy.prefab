@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 3644073162169561291}
   - component: {fileID: -7833846459551256675}
   - component: {fileID: 3479939344421528548}
+  - component: {fileID: -8171944844818265236}
+  - component: {fileID: -2239845124639663097}
+  - component: {fileID: -349142674718203060}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -115,7 +118,30 @@ MonoBehaviour:
   projectile: {fileID: 6977089869093607424, guid: 1a052eaeb39fe204383281596089d4f4,
     type: 3}
   projectileSpeed: 10
+  deathVFX: {fileID: 4475417849043065291, guid: 129b957f6dd88c8408df5b754b6bd404,
+    type: 3}
+  durationOfExplosion: 1
+  deathSound: {fileID: 8300000, guid: 88742b5494382da4186421e9a27bf9d1, type: 3}
+  deathSoundVolume: 0.7
+  shootSound: {fileID: 8300000, guid: 818ed5ceed9827a46ab77d611fbf84f2, type: 3}
+  shootSoundVolume: 0.2
 --- !u!58 &3479939344421528548
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694118469776387592}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.465
+--- !u!58 &-8171944844818265236
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,3 +157,37 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.465
+--- !u!50 &-2239845124639663097
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694118469776387592}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-349142674718203060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694118469776387592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc09419986c9e004da3096e8a7fc577f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 200
